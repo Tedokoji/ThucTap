@@ -1,0 +1,53 @@
+.cover{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(45deg,#ffffff1e, #faa380af);
+
+    & .cover-context-left{
+        display: flex;
+        flex-direction: column  ;
+        justify-content: flex-start;
+        & .LMStext{
+            font-size: 60px;
+        }
+        & .E-finance{
+            font-size: 45px;
+            color: white;
+            background: linear-gradient(to right,#f47c23, #ec561c);
+            border: 0px;
+            border-radius: 5px;
+            font-weight: bold;
+            padding: 10px 20px 10px 20px;
+            cursor: pointer;
+        }
+        & .logo{
+            width: 286px;
+            height: 286px;
+            margin-left: 100px;
+        }
+        & p{
+            font-size: 25px;
+            margin-top: 150px;
+        }
+    }
+    & .cover-context-right{
+        display: flex;
+        flex-direction: column  ;
+        justify-content: flex-end;
+        align-items: center;
+        & .pc{
+            width: 700px;
+            height: 600px;
+        }
+        & p{
+            font-size: 25px;
+            margin-top: 150px;
+            color:rgb(173, 113, 2)
+        }
+    }
+}
