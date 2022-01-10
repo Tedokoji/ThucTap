@@ -1,0 +1,19 @@
+ul {
+    & li{
+        position: relative;
+        top: 0px;
+        left: -10px;
+        margin-top: 20px;
+        list-style-type: none;
+        color: #373839;
+        opacity: 0.7;
+        &.bolder{
+            font-weight: bold;
+            opacity: 1;
+        }
+        &:hover {
+            font-weight: bold;
+            opacity: 1;
+        }
+    }
+}
