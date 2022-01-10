@@ -9,13 +9,15 @@ interface Loginprops{
     title:string
     Password:string
     btn:string
+    underpass:string
 }
-function Login({title,Password,btn}:Loginprops) {
+function Login({title,Password,btn,underpass}:Loginprops) {
     const [forget,setForget] = useState(true)
     const [name,setName] = useState('')
     const [pass,setPass] = useState('')
     const navi = useNavigate()
     const Forget = ()=>{
+        if(underpass === "< Quay lại trang chủ"){ navi('/'); return}
         navi('/login-forget')
         setForget(false)
     }
@@ -49,7 +51,7 @@ function Login({title,Password,btn}:Loginprops) {
                    </div>
                 </div>
                 <p onClick={Forget}
-                 className="forget">Quên mật khẩu?</p>
+                 className="forget">{underpass}</p>
                 <button  className={pass === '' ? 'activebtn' : 'loginbtn'}>
                     {btn}
                 </button>
