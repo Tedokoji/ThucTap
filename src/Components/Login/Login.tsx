@@ -1,10 +1,12 @@
-import {useState,useLayoutEffect} from 'react'
+import {useEffect, useState} from 'react'
 import './Login.scss'
 import edu from '../static file/EduIcon.jpg'
 import loginicon1 from '../static file/loginicon1.jpg'
 import loginicon2 from '../static file/loginicon2.png'
 import Blankshit from '../static file/Blankshit.png'
 import { useNavigate } from 'react-router-dom'
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import { auth } from '../../Firebase/Firebase'
 interface Loginprops{
     title:string
     Password:string
@@ -15,12 +17,37 @@ function Login({title,Password,btn,underpass}:Loginprops) {
     const [forget,setForget] = useState(true)
     const [name,setName] = useState('')
     const [pass,setPass] = useState('')
+    const [user,setUser] = useState()
+    onAuthStateChanged(auth,(currentuser:any)=>{
+        setUser(currentuser)
+    })
     const navi = useNavigate()
     const Forget = ()=>{
         if(underpass === "< Quay lại trang chủ"){ navi('/'); return}
         navi('/login-forget')
         setForget(false)
     }
+   
+    // const register = async()=>{
+    //     try
+    //     {const users = await createUserWithEmailAndPassword(auth,name,pass)}
+    //     catch(err){console.log(err)}
+    // }
+    const login = async()=>{
+        try
+        {const users = await signInWithEmailAndPassword(auth,name,pass)
+        console.log(users);
+        navi('/menu')
+        }
+        catch(err){console.log('what?')
+        navi('/login')}
+        
+        
+    }
+    // const logout = async()=>{
+    //     await signOut(auth)
+    // }
+    
     console.log('re')
     return (
         <div className="LoginCover">
@@ -52,7 +79,8 @@ function Login({title,Password,btn,underpass}:Loginprops) {
                 </div>
                 <p onClick={Forget}
                  className="forget">{underpass}</p>
-                <button  className={pass === '' ? 'activebtn' : 'loginbtn'}>
+                <button  onClick={login}
+                className={pass === '' ? 'activebtn' : 'loginbtn'}>
                     {btn}
                 </button>
             </div>
