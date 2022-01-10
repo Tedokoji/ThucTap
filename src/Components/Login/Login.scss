@@ -60,8 +60,32 @@
             }
         }
         & .loginbtn{
-            transform: scale(0.5);
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+            padding : 15px 150px 15px 150px;
+            border: 0px;
+            border-radius: 8px;
             margin-left:50px;
+            background: linear-gradient(270deg, #FF5400 0%, #F17F21 80.56%);
+            cursor: pointer;
+        }
+        & .activebtn{
+            background-color: #C9C4C0;
+            font-size: 22px;
+            font-weight: 600;
+            color: white;
+            padding : 15px 150px 15px 150px;
+            border: 0px;
+            border-radius: 8px;
+            margin-left:50px;
+        }
+        & .forget{
+            font-size: 20px;
+            font-weight: 400;
+            color: #FF7506;
+            padding: 0px 100px 20px 400px;
+            margin:0px;
             cursor: pointer;
         }
     }

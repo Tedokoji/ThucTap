@@ -2,7 +2,12 @@ import React from 'react'
 import './Cover.scss'
 import PC from '../static file/PC.jpg'
 import logo from '../static file/Logo.jpg'
+import { useNavigate } from 'react-router-dom'
 function Cover() {
+    const navi = useNavigate()
+    const Login = ()=>{
+        navi('/login')
+    }
     return (
         <div className="cover">
            <div className="cover-context-left">
@@ -10,7 +15,7 @@ function Cover() {
                         <h1 className="LMStext">
                             LMS - Learning<br/> Management System
                         </h1>
-                        <button
+                        <button onClick={Login}
                         className="E-finance"
                         >E-Finance</button>
                 </div>
