@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useLayoutEffect, useState} from 'react'
 import './Login.scss'
 import edu from '../static file/EduIcon.jpg'
 import loginicon1 from '../static file/loginicon1.jpg'
@@ -23,7 +23,11 @@ function Login({title,Password,btn,underpass}:Loginprops) {
     })
     const navi = useNavigate()
     const Forget = ()=>{
-        if(underpass === "< Quay lại trang chủ"){ navi('/'); return}
+        if(underpass === "< Quay lại trang chủ"){
+            navi('/');
+            return
+        }
+        setPass('')
         navi('/login-forget')
         setForget(false)
     }
@@ -47,7 +51,6 @@ function Login({title,Password,btn,underpass}:Loginprops) {
     // const logout = async()=>{
     //     await signOut(auth)
     // }
-    
     console.log('re')
     return (
         <div className="LoginCover">

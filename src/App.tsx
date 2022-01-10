@@ -1,12 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import Cover from './Components/Cover/Cover';
 import Login from './Components/Login/Login';
 import { Route, Routes } from 'react-router-dom';
 import Menu from './Components/Menu/Menu';
-
+import { Provider } from 'react-redux';
+import {store} from './Components/Redux/Store'
 function App() {
   return (
+    <Provider store={store}>
     <div className="App">
         <Routes>
           <Route path="/" element={<Cover/>}/>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/menu" element={<Menu/>}/>
         </Routes>
     </div>
+    </Provider>
   );
 }
 
