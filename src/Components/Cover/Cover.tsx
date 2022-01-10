@@ -21,9 +21,11 @@ function Cover() {
            </div>
            <div className="cover-context-right">
                 <img className="pc" src={PC} alt='pc'/>
-            <p>
+                <h1 className="el"></h1>
+            <p> 
                 Designed by UI/UX Team of Alta Media
             </p>
+            
            </div>
         </div>
     )

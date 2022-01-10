@@ -1,0 +1,68 @@
+.LoginCover{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../static\ file/LoginCover.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    & .edu{
+        position: absolute;
+        top: -30px;
+        right: 0px;
+        transform: scale(0.5)
+    }
+    & .LoginPage{
+        width: 50%;
+        height: 100%;  
+        position: absolute;
+        right:0px;
+        top: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & h1{
+            font-size: 52px;
+        }
+        & .LoginInput{
+            width: 466px;
+            height: 166px;
+            & p{
+                margin:10px;
+                font-size: 20px;
+                font-weight: 600;
+            }
+            & .loginicon1{
+                position: relative;
+                top: 17px;
+                left: 50px;
+                transform: scale(0.7)
+            }
+            & .loginicon2{
+                position: relative;
+                top: 17px;
+                left: 50px;
+                transform: scale(0.7)
+            }
+            & input{
+                font-size: 22px;
+                padding : 15px 100px 15px 50px;
+                background-color: #F2F2F2;
+                border: 0px;
+                border-radius: 8px;
+                &:focus {
+                background-color: white;
+                border: 2px solid black;
+                font-size: 22px;
+                padding : 15px 100px 15px 50px;
+                border: 0px;
+                border-radius: 8px;
+                }                       
+            }
+        }
+        & .loginbtn{
+            transform: scale(0.5);
+            margin-left:50px;
+            cursor: pointer;
+        }
+    }
+}

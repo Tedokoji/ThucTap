@@ -1,19 +1,20 @@
 .cover{
     width: 100vw;
     height: 100vh;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background: linear-gradient(45deg,#ffffff00, #faa38094);
-
+    background: linear-gradient(45deg,#fafafa, #f0cabc46);
+    position: relative;
     & .cover-context-left{
         display: flex;
         flex-direction: column  ;
         justify-content: flex-start;
+        position: relative;
         & .LMStext{
             font-size: 60px;
+            color:#373839;
         }
         & .E-finance{
             font-size: 45px;
@@ -26,13 +27,15 @@
             cursor: pointer;
         }
         & .logo{
-            width: 286px;
-            height: 200px;
-            margin-left: 50px;
+            width: 200px;
+            height: 150px;
+            margin-left: 60px;
+            font-weight: 400;
         }
         & p{
             font-size: 22px;
             margin-top: 150px;
+            color:#373839;
         }
     }
     & .cover-context-right{
@@ -40,15 +43,36 @@
         flex-direction: column  ;
         justify-content: flex-end;
         align-items: center;
+        position: relative;
+        z-index: 3;
         & .pc{
             width: 600px;
             height: 500px;
             margin-left:150px;
+            position: relative;
+            top: 300px;
+            z-index: 2;
+            left: -100px;
+        }
+        & .el{
+            position: relative;
+            width: 600px;
+            height: 600px;
+            top:-200px;
+            left: -50px;
+            border-radius: 50%;
+            background: #FFF4F1;
+            box-shadow: inset 10px -10px 50px rgba(255, 203, 174, 0.8);
+            z-index: 1;
         }
         & p{
             font-size: 25px;
             margin-top: 150px;
-            color:rgb(173, 113, 2)
+            color:#CC5C00;
+            position: relative;
+            top: -250px;
+            
         }
+       
     }
 }
