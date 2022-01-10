@@ -1,0 +1,33 @@
+ .navbar-detail{
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow-y: scroll;
+    border-right: 1px solid rgba(0, 0, 0, 0.589);
+    &  div{
+        margin-left: 30px;
+        margin-bottom: 50px;
+        cursor:pointer;    
+        & svg path{
+            fill:#373839;  
+            opacity: 0.7;        
+        }
+    }
+    & .qlhp svg path{
+        fill:#FF7506;  
+        opacity: 1;        
+    }
+    & .qll svg path{
+        fill:#FF7506;  
+        opacity: 1;        
+
+    }
+    & .dxvpd svg path{
+        fill:#FF7506;  
+        opacity: 1;        
+
+    }
+  }
