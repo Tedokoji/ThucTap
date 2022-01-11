@@ -5,7 +5,7 @@ import loginicon1 from '../static file/loginicon1.jpg'
 import loginicon2 from '../static file/loginicon2.png'
 import Blankshit from '../static file/Blankshit.png'
 import { useNavigate } from 'react-router-dom'
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import {  onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import { auth } from '../../Firebase/Firebase'
 interface Loginprops{
     title:string
@@ -13,14 +13,11 @@ interface Loginprops{
     btn:string
     underpass:string
 }
-function Login({title,Password,btn,underpass}:Loginprops) {
+function Login({title,Password,btn,underpass}:Loginprops,props:any) {
     const [forget,setForget] = useState(true)
     const [name,setName] = useState('')
     const [pass,setPass] = useState('')
-    const [user,setUser] = useState()
-    onAuthStateChanged(auth,(currentuser:any)=>{
-        setUser(currentuser)
-    })
+   
     const navi = useNavigate()
     const Forget = ()=>{
         if(underpass === "< Quay lại trang chủ"){
@@ -41,16 +38,14 @@ function Login({title,Password,btn,underpass}:Loginprops) {
         try
         {const users = await signInWithEmailAndPassword(auth,name,pass)
         console.log(users);
-        navi('/menu')
+        navi('/s')
         }
         catch(err){console.log('what?')
         navi('/login')}
         
         
     }
-    // const logout = async()=>{
-    //     await signOut(auth)
-    // }
+    
     console.log('re')
     return (
         <div className="LoginCover">

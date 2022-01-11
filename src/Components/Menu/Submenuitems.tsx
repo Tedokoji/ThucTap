@@ -3,11 +3,11 @@ import { changeActiveMenuIcon } from './../Redux/Actions';
 import './Sub.scss'
 function Submenuitems(props:any) {
     return (
-            <ul>
+            <ul className="subreee">
              {
                  props.list.map((e:{title:string},index:number)=>{
                      return (
-                         <li onClick={()=>{props.changeActiveMenuIcon({active:props.active,
+                         <li  onClick={()=>{props.changeActiveMenuIcon({active:props.active,
                             subactive:e.title})}}
                          className={props.subactive === e.title ? 
                         'bolder':''} key={index}>{e.title}</li>

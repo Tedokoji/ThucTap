@@ -1,7 +1,8 @@
 .navflex{
-    width: 100vw;
     height: 100vh;
     display:flex;
+    position: relative;
+    z-index:100;
   & .navbar{
     height: 100vh;
     width: 100px;  
@@ -56,6 +57,9 @@
 
 }
 
+.screen-wrapper{
+    display: flex;
+}
 .holyshiet{
     cursor:pointer;
     background: #fff9f483;

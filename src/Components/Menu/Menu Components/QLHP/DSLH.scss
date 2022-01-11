@@ -1,0 +1,85 @@
+.Context{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(255, 255, 255, 0);
+    top: 0px;
+    right: 0px;
+    & .logout{
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    & h3{
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0px 20px 5px 10px
+    }
+    & p{
+        font-size: 18px;
+        font-weight: 400;
+        padding-left: 10px;
+        padding-right: 10px;
+        color:#FF7506;
+        cursor:pointer;
+        &:hover{
+            text-decoration: underline;
+
+            }
+        }
+    }
+    & .history{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 1000px;
+        margin-left: 150px;
+        & .root{
+            color: #C9C4C0;
+            font-size:22px;
+            margin:0px;
+        }
+        & .rootar{
+            position: relative;
+            top: 3px;
+            left: 30px;
+        }
+        & .root-sub{
+            position: relative;
+            top: -3px;
+            left: 140px;
+            transform: scale(1.5);
+            color: #373839
+        }
+
+    }
+    & .Board{
+        width: 87%;
+        margin-left: 10%;
+        height: 60%;
+        background-color: rgba(243, 158, 61, 0.068);
+        & .Board-top{
+            width: 100px;
+            height:50px;
+            background: linear-gradient(270deg, #FF5400 0%, #F17F21 80.56%);
+            color:white;        
+            & i{
+                position: absolute;
+            }   
+                 
+        }
+        & tbody i{
+            cursor: pointer;    
+    
+        }
+     
+    }
+    & .footer{
+        margin-left: 10%;
+
+        & input{
+            width: 50px;
+            height: 30px;
+        }
+    }
+}
