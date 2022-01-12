@@ -13,7 +13,7 @@ function Menuitems(props:any) {
     const list2= [{title:"Danh sách giáo viên"},
     {title:"Danh sách bảng chấm công"},
     {title:"Danh sách bảng lương"},
-    {title:"Danh sách biểu phí"},
+    {title:"QLL-Danh sách biểu phí"},
     {title:"Danh sách khoản chi"},
     {title:"Thiết lập ngạch, hạng"},
     {title:"Công thức tính lương"}]

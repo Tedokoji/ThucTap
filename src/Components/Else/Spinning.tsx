@@ -9,7 +9,7 @@ function Spinning(props:any) {
     useLayoutEffect(()=>{
         props.datahaha()
         const s =setTimeout(()=>{
-            navi('/menu-QLHP-DSLH')
+            navi('/QLHP-Danh%20sách%20lớp%20học')
         },1000)
         return ()=>{
             clearTimeout(s)

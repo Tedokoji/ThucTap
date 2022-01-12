@@ -1,14 +1,26 @@
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { changeActiveMenuIcon } from './../Redux/Actions';
 import './Sub.scss'
 function Submenuitems(props:any) {
+    const navi = useNavigate()
+    useEffect(()=>{
+        navi(`/QLHP-${props.subactive}`)
+    },[props.subactive])
     return (
             <ul className="subreee">
              {
                  props.list.map((e:{title:string},index:number)=>{
                      return (
-                         <li  onClick={()=>{props.changeActiveMenuIcon({active:props.active,
-                            subactive:e.title})}}
+                         <li  onClick={()=>{
+                             props.changeActiveMenuIcon(
+                                 {active:props.active,subactive:e.title}
+                                
+                                 )
+                                 
+                                }
+                                }
                          className={props.subactive === e.title ? 
                         'bolder':''} key={index}>{e.title}</li>
                      )
