@@ -1,13 +1,14 @@
 import { combineReducers } from "redux"
-import { ACTIVE_MENU_ICON, DATA_FETCH } from "./Types"
+import { ACTIVE_DETAILS, ACTIVE_MENU_ICON, DATA_FETCH } from "./Types"
 const initactive = {
     active : 'qlhp',
     subactive : 'Danh sách lớp học',
-    data:[]
+    data:[],
+    details: []
 }
 export const activereducer = (state = initactive,
-    actions:{type:string,active:string,subactive:string,datas:any})=>{
-        console.log(actions.datas);       
+    actions:{type:string,active:string,subactive:string,datas:any,detail:any})=>{
+        console.log(actions.detail);       
     switch(actions.type){
         case ACTIVE_MENU_ICON:
             return{
@@ -19,6 +20,11 @@ export const activereducer = (state = initactive,
 
                 return{...state,
                     data:actions.datas
+                }
+            case ACTIVE_DETAILS:
+                return{
+                    ...state,
+                    details: actions.detail
                 }
         default: return state
     }

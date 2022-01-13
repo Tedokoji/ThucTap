@@ -3,14 +3,13 @@ import { useLayoutEffect } from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { fetchthatmf } from '../Redux/Actions'
-import './Table.scss'
 function Spinning(props:any) {
     const navi= useNavigate()
     useLayoutEffect(()=>{
         props.datahaha()
         const s =setTimeout(()=>{
             navi('/QLHP-Danh%20sách%20lớp%20học')
-        },1000)
+        },700)
         return ()=>{
             clearTimeout(s)
         }

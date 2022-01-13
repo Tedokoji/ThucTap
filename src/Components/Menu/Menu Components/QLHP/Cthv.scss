@@ -1,0 +1,80 @@
+
+.detail-board{
+    width: 87%;
+    height:150px;
+    background: #FFF9F4;
+    border: 1px solid #FF7506;
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin-left: 10%;
+    display: flex;
+    
+& .detail-board-infos{
+    position: relative;
+    width: 300px;
+    top: 0px;
+    left: 50px;
+    & span{
+        position: absolute;
+        left: 150px;
+        color: #373839;
+        font-style: normal;
+        font-weight: normal;
+        opacity: 0.8;
+    }
+}
+& .detail-board-infoss{
+    width: 300px;
+    position: relative;
+    top: 0px;
+    left: 25%;
+    & span{
+        position: absolute;
+        left: 150px;
+        color: #373839;
+        font-style: normal;
+        font-weight: normal;
+        opacity: 0.8;
+    }
+}
+}
+.root-subsub{
+    color: #C9C4C0;
+    font-size:22px;
+    margin:0px;
+    margin-left:50px;
+}
+.dshvbtn{
+    margin-left:10%;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+
+}
+.slbpcount{
+    margin-left:10%;
+    position: relative;
+    top: 20px;
+    color:#373839;
+    & span{
+         margin-left:15px;
+        font-style: normal;
+        font-weight: normal;
+        color: #373839;
+        opacity: 0.8;
+    }
+}
+.oho{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 87%;
+   & .dshv{
+        margin-left:11.45%;   
+        color:#CC5C00
+   }
+   & i svg {
+    cursor: pointer;
+    margin-left: 40%;
+   }
+}

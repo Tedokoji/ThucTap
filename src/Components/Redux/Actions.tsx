@@ -1,6 +1,6 @@
 import { collection, getDocs } from "firebase/firestore"
 import { db } from "../../Firebase/Firebase"
-import { ACTIVE_MENU_ICON, DATA_FETCH } from "./Types"
+import { ACTIVE_DETAILS, ACTIVE_MENU_ICON, DATA_FETCH } from "./Types"
 
 export const changeActiveMenuIcon = (data:{active:string,subactive:string})=>{
     
@@ -15,6 +15,12 @@ export const dataFetch = (data:any)=>{
     return{
         type: DATA_FETCH,
         datas:data
+    }
+}
+export const changeActivedetail = (data:any)=>{
+    return{
+        type: ACTIVE_DETAILS,
+        detail: data
     }
 }
 export const fetchthatmf=()=>{

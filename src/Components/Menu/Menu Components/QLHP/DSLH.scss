@@ -2,9 +2,12 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-color:rgba(255, 255, 255, 0);
     top: 0px;
     right: 0px;
+    background-image: url('https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/270486307_473592607693455_1609074819925007343_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_ohc=m-5ElawywAEAX9X1qWm&_nc_ht=scontent.fsgn5-10.fna&oh=00_AT8tVhdT56O49tBufMY2Cat5V-AXYeCds2W8FhmXIwsCTQ&oe=61E3E1EC');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
     & .logout{
         height: 50px;
         display: flex;
@@ -73,6 +76,7 @@
            justify-content: center;
            align-items: center;
            margin-bottom: 10px;
+           width:500px;
             & svg{
                 position: relative;
                 top: 10px;
@@ -88,18 +92,25 @@
     }
     & .Board{
         width: 87%;
-        margin-left: 10%;
         height: 60%;
+        margin-left: 10%;
+
         background-color: rgba(243, 158, 61, 0.068);
-        & .Board-top{
+        .Board-top{
             width: 100px;
             height:50px;
             background: linear-gradient(270deg, #FF5400 0%, #F17F21 80.56%);
-            color:white;        
+            color:white;      
             & i{
                 position: absolute;
             }   
                  
+        }
+        & span{
+            color: #373839;
+            font-style: normal;
+            font-weight: normal;
+            opacity: 0.8;
         }
         & tbody i{
             cursor: pointer;    
