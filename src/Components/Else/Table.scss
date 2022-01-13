@@ -3,13 +3,16 @@
     height: 20%;
     margin-left: 10%;
     position: relative;
-    background-color: rgba(243, 158, 61, 0.068);
     z-index: 1;
    & .Board-topz{
         width: 80px;
         height:35px;
         background: #373839;
         color:white;                
+    }
+    & tbody tr:nth-child(even){
+        background-color:#F0F3F6;
+        color: white
     }
     & span{
         color: #373839;
@@ -57,9 +60,11 @@
            opacity: 0.8;
        }
         & .thuhocphi{
-            width: 100%;
+            width: 87%;
             display: flex;
+            border-radius: 12px;
             justify-content: space-around;
+            background-color: #F0F3F6;
         }
         & ul{
             width: 100%;
@@ -68,6 +73,7 @@
             flex-direction: column  ;
             justify-content: flex-start;
             list-style-type: number;
+            
         }
 
     }
@@ -77,7 +83,6 @@
     height: 20%;
     position: relative;
     padding-bottom: 50px;
-    background-color: rgba(243, 158, 61, 0.068);
     z-index: 1;
    & .Board-tope{
         width: 80px;
@@ -85,6 +90,10 @@
         background: linear-gradient(270deg, #FF5400 0%, #F17F21 80.56%);
 
         color:white;                
+    }
+    & tbody tr:nth-child(even){
+        background-color:#F0F3F6;
+        color: white
     }
     & span{
         color: #373839;

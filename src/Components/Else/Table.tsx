@@ -81,8 +81,8 @@ function Table(props:any) {
                         <h4>Mã biểu phí: <span>10_BHYT</span></h4>
                         <h4>Niên khóa: <span>2020 - 2023</span></h4>
                     </div>
-                </div>
                 
+                </div>
                     <ul>
                         <li>Hồ sơ ghi danh</li>
                         <li>Phí ghi danh</li>
