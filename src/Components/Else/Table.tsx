@@ -3,7 +3,6 @@ import './Table.scss'
 import Tablez from './Tablez'
 function Table(props:any) {
     const [toggle,setToggle] = useState(false)
-    const [togglez,setTogglez] = useState(false)
     const list1:Array<any> = [
         {title: "Thời gian" },
         {title: "Nội dung cập nhật" },
@@ -45,8 +44,11 @@ function Table(props:any) {
 
               {
                e.map((a:any,index:number) =>{
+                 
                     return(
-                       <th key={index}><span>{a.title}</span></th>
+                       <th className="ngungapdung"
+                        key={index}><span>{a.title}</span>                
+                       </th>
                     )
                 })
                                          
@@ -92,6 +94,7 @@ function Table(props:any) {
                 <p></p>
             </div>
         </div>}
+       
         </>
     )
 }

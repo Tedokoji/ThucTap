@@ -78,3 +78,42 @@
     margin-left: 40%;
    }
 }
+.datepicker{
+    display: flex;
+    justify-content: space-around;
+    align-content:center;
+    & .date{
+        display: flex;
+        justify-content: space-around;
+        align-content:center;
+        margin:30px;
+        & i{
+            position: relative;
+            top:-6px;
+        }
+    }
+}
+.btnbpone{
+    & .btnhuy{
+        font-size: 22px;
+        font-weight: 600;
+        color: #373839;
+        padding : 15px 100px 15px 100px;
+        border: 0px;
+        background: #F2F2F2;
+        border-radius: 8px;
+        margin: 30px;
+        cursor:pointer;
+    }
+    & .btnluu{
+        font-size: 22px;
+        font-weight: 600;
+        color: white;
+        padding : 15px 100px 15px 100px;
+        border: 0px;
+        background: #FF7506;
+        border-radius: 8px;
+        margin: 30px;
+        cursor:pointer;
+    }
+}

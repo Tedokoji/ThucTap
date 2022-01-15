@@ -27,6 +27,8 @@ function App() {
            element={<><Menu/><DSLH/></>}/>
           <Route path="/cclp"
            element={<><Menu/><CTHV/></>}/>
+          <Route path="/dshv"
+           element={<><Menu/><CCLP/></>}/>
 
           
 
