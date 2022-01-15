@@ -1,10 +1,14 @@
+import { doc, updateDoc } from 'firebase/firestore'
 import React from 'react'
 import { connect } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
 import Logout from '../../../Else/Logout'
 import Table from '../../../Else/Table'
 import { changeActiveMenuIcon, fetchthatmf, changeActivedetail } from '../../../Redux/Actions'
 import './Cthv.scss'
+import {db} from '../../../../Firebase/Firebase'
+
 
 function CTHV(props:any) {
     const navi = useNavigate()
@@ -24,7 +28,16 @@ function CTHV(props:any) {
         {title: "Trạng thái" },
         ]
     ]
-      
+      const UpdateBP= async ()=>{
+          console.log(props.detail[5]);
+          props.datahaha()
+          await updateDoc(doc(db,'DSLH',props.detail[5]),{
+              data: [props.detail[0],props.detail[1],props.detail[2],
+              Number(props.detail[3])+1
+              ,props.detail[4]]
+          })
+          
+      }
    return   (
         <div className="Context">
              <Logout/>
@@ -72,7 +85,7 @@ function CTHV(props:any) {
              </h5>
              <div className="oho">
                 <h2 className="dshv">Danh sách biểu phí</h2>
-                <i >
+                <i onClick={UpdateBP}>
                     <svg width="208" height="52" viewBox="0 0 208 52" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M0 8C0 3.58172 3.58172 0 8 0H200C204.418 0 208 3.58172 208 8V44C208 48.4183 204.418 52 200 52H8.00001C3.58173 52 0 48.4183 0 44V8Z" fill="#FF7506"/>
     <path fillRule="evenodd" clipRule="evenodd" d="M36 18C36.8284 18 37.5 18.5312 37.5 20.125V32.875C37.5 34.4688 36.8284 35 36 35C35.1716 35 34.5 34.4688 34.5 32.875V20.125C34.5 18.5312 35.1716 18 36 18Z" fill="#FFF9F4"/>

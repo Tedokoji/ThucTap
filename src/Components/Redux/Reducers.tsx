@@ -30,3 +30,4 @@ export const activereducer = (state = initactive,
     }
 }
 
+// export const tabledatareducer = (state = inittabledata,)

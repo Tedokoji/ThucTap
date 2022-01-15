@@ -111,12 +111,13 @@ function DSLH(props:any) {
                         </thead>
                     <tbody >
                         {
-                         props.boarddata.map((e:any) =>{
+                         props.boarddata.map((e:any,index:number) =>{
                              return(
                                  <tr key={e[1]} >
 
                                      {
                                          e.map((a:any,index:number) =>{
+                                             if (index === 5) return
 
                                              return(
                                                  <th key={index}><span>{a}</span></th>

@@ -27,8 +27,13 @@ export const fetchthatmf=()=>{
 
     return async(dispatch:any)=>{
         const querySnapshot = await getDocs(collection(db, "DSLH"))
+        console.log(querySnapshot.docs.map((doc:any)=>{
+            return (doc.id)
+                  
+        }));
+        
        const ahaha = querySnapshot.docs.map((doc:any)=>{
-            return (doc.get('data'))
+            return ([...doc.get('data'),doc.id])
                   
         })
         console.log(ahaha);
