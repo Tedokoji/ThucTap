@@ -1,0 +1,51 @@
+.popup{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    top:0px;
+    
+    background-color: rgba(0, 0, 0, 0.281);
+    & .popupcontext{
+        width:50%;
+        background-color: white;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & .Xone{
+            transform: scale(0.8);
+            position: relative;
+            top: 10px;
+            right: -45%;
+            cursor: pointer;
+        }
+        & span{
+            margin-left:15px;
+           font-style: normal;
+           font-weight: normal;
+           color: #373839;
+           opacity: 0.8;
+       }
+        & .thuhocphi{
+            width: 87%;
+            display: flex;
+            border-radius: 12px;
+            justify-content: space-around;
+            background-color: #F0F3F6;
+        }
+        & ul{
+            width: 100%;
+            margin-left: 40%;
+            display: flex;
+            flex-direction: column  ;
+            justify-content: flex-start;
+            list-style-type: number;
+        }
+
+    }
+}

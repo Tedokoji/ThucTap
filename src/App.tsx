@@ -8,6 +8,7 @@ import {store} from './Components/Redux/Store'
 import DSLH from './Components/Menu/Menu Components/QLHP/DSLH';
 import CCLP from './Components/Menu/Menu Components/QLHP/CCLP';
 import CTHV from './Components/Menu/Menu Components/QLHP/CTHV';
+import TTHV from './Components/Menu/Menu Components/QLHP/TTHV';
 function App() {
   return (
     <Provider store={store}>
@@ -29,7 +30,8 @@ function App() {
            element={<><Menu/><CTHV/></>}/>
           <Route path="/dshv"
            element={<><Menu/><CCLP/></>}/>
-
+          <Route path="/tthv"
+           element={<><Menu/><TTHV/></>}/>
           
 
           <Route path="/QLHP-Danh%20s%C3%A1ch%20bi%E1%BB%83u%20ph%C3%AD"

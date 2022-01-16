@@ -9,7 +9,7 @@ import './CCLP.scss'
 function CCLP(props:any) {
     const navi = useNavigate()
     const hshv = ()=>{
-       console.log('hshv');
+       navi('/tthv')
        
     }
     return (   
@@ -82,7 +82,7 @@ function CCLP(props:any) {
                         </tr>
                      
                     </tbody>
-                </table>
+                    </table>
             </div>
         </div>  
     )

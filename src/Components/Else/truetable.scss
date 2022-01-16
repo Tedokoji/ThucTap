@@ -1,0 +1,32 @@
+.upz{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    & h4{
+        margin: 10px 0px 0px 50px;
+    }
+}
+.thanhtoancontainer{
+    & .tongthanhtoan{
+        margin:0;
+        position:relative;
+        left:-100px;   color:#CC5C00;
+        & .tongthanhtien{
+            font-weight:bold;
+            opacity: 1;
+            position: relative;
+            left: 200px;
+        }
+    }
+}
+.btnluu{
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    padding : 15px 100px 15px 100px;
+    border: 0px;
+    background: #FF7506;
+    border-radius: 8px;
+    margin: 30px;
+    cursor:pointer;
+}

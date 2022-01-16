@@ -1,0 +1,36 @@
+
+.detailboard-container{
+    width: 87%;
+    background: #FFF9F4;
+    border: 1px solid #FF7506;
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin-left: 10%;
+    & .literallystudentname{
+       position: relative;
+       left: 50px;
+       color: #CC5C00;
+       margin:10px;
+    }
+& .detail-board-infozz{
+    position: relative;
+    width:400px;
+    top: 0px;
+    left: 10px;
+    margin-left:50px;
+    & span{
+        position: absolute;
+        left: 180px;
+        color: #373839;
+        font-style: normal;
+        font-weight: normal;
+        opacity: 0.8;
+    }
+}
+ & .detailboard-containerz{
+     display: flex
+ }
+}
+.dshv.color{
+    color:#CC5C00
+}
