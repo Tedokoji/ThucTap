@@ -5,7 +5,7 @@ import loginicon1 from '../static file/loginicon1.jpg'
 import loginicon2 from '../static file/loginicon2.png'
 import Blankshit from '../static file/Blankshit.png'
 import { useNavigate } from 'react-router-dom'
-import {  onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth'
+import {  onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../Firebase/Firebase'
 interface Loginprops{
     title:string

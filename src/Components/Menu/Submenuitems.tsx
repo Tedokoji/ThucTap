@@ -1,11 +1,11 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import { connect } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { changeActiveMenuIcon } from './../Redux/Actions';
 import './Sub.scss'
 function Submenuitems(props:any) {
     const navi = useNavigate()
-    useEffect(()=>{
+    useLayoutEffect(()=>{
         navi(`/QLHP-${props.subactive}`)
         console.log('hello')
 
