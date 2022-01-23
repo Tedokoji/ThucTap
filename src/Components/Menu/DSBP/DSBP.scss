@@ -1,0 +1,13 @@
+.Tatcabieuphi{
+    margin-left: 9%;
+    color:#373839;
+    font-size: 22px
+}
+.samerowbetch{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    & i{
+        cursor: pointer;
+    }
+}

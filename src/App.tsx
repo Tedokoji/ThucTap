@@ -9,6 +9,7 @@ import DSLH from './Components/Menu/Menu Components/QLHP/DSLH';
 import CCLP from './Components/Menu/Menu Components/QLHP/CCLP';
 import CTHV from './Components/Menu/Menu Components/QLHP/CTHV';
 import TTHV from './Components/Menu/Menu Components/QLHP/TTHV';
+import DSBP from './Components/Menu/DSBP/DSBP';
 function App() {
   return (
     <Provider store={store}>
@@ -35,7 +36,7 @@ function App() {
           
 
           <Route path="/QLHP-Danh%20s%C3%A1ch%20bi%E1%BB%83u%20ph%C3%AD"
-           element={<><Menu/></>}/>
+           element={<><Menu/><DSBP/></>}/>
            <Route path="/QLHP-Danh%20s%C3%A1ch%20kho%E1%BA%A3n%20thu"
            element={<><Menu/></>}/>
            <Route path="/QLHP-H%C3%ACnh%20th%E1%BB%A9c%20thu"
